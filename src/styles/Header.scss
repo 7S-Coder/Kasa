@@ -1,0 +1,30 @@
+@import "./_variables";
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+
+  nav ul {
+    display: flex;
+  }
+
+  a {
+    list-style: none;
+    color: $primary-color;
+  }
+
+  a:last-child {
+    margin-left: 20px;
+  }
+
+  a:hover {
+    color: $primary-color;
+  }
+}
