@@ -1,0 +1,37 @@
+@import "./_variables";
+@import "./_mixins";
+@import "./_placeholders";
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  padding-top: 40px;
+  background-color: black;
+  color: white;
+
+  a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Container {
+    @extend %flex-center;
+    flex-direction: column;
+  }
+
+  .LogoFooter {
+    padding-bottom: 30px;
+  }
+
+  span {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
