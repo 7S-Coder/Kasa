@@ -1,5 +1,12 @@
+import Banner from "../components/Banner";
+
 const About = () => {
-  return <div>A propos</div>;
+  const bannerData = {
+    title: "",
+    img: "src/img/Banniere-apropos.png",
+  };
+
+  return <Banner {...bannerData} />;
 };
 
 export default About;
