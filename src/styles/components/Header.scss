@@ -20,6 +20,10 @@ header {
     display: flex;
   }
 
+  .nav-active {
+    text-decoration: underline;
+  }
+
   a {
     list-style: none;
     color: $primary-color;
