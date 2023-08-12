@@ -1,5 +1,5 @@
 import footerLogo from "../img/logoWhite.png";
-import "../styles/Footer.scss";
+import "../styles/components/Footer.scss";
 
 const Footer = () => {
   return (
