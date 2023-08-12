@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import Gallery from "../components/Gallery";
 
 const Home = () => {
   const bannerData = {
@@ -6,7 +7,12 @@ const Home = () => {
     img: "src/img/Banniere-accueil.png",
   };
 
-  return <Banner {...bannerData} />;
+  return (
+    <>
+      <Banner {...bannerData} />
+      <Gallery />
+    </>
+  );
 };
 
 export default Home;

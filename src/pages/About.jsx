@@ -6,7 +6,11 @@ const About = () => {
     img: "src/img/Banniere-apropos.png",
   };
 
-  return <Banner {...bannerData} />;
+  return (
+    <>
+      <Banner {...bannerData} />
+    </>
+  );
 };
 
 export default About;

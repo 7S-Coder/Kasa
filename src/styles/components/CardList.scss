@@ -1,0 +1,11 @@
+@import "../_variables";
+@import "../_mixins";
+@import "../_placeholders";
+
+.card-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}

@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
+import "../styles/components/Banner.scss";
 
 const Banner = (props) => {
   return (
     <div className="banner">
-      <img src={props.img} alt="Bannière" />
-      <h1>{props.title}</h1>
+      <div className="banner-container">
+        <img className="banner-img" src={props.img} alt="Bannière" />
+        <h1 className="banner-title">{props.title}</h1>
+      </div>
     </div>
   );
 };
