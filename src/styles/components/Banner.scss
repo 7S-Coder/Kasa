@@ -27,6 +27,10 @@
       height: 223px;
       border-radius: 25px;
       position: relative;
+      transition: 0.3s;
+      &:hover {
+        filter: grayscale(8);
+      }
     }
 
     .banner-title {
@@ -43,6 +47,7 @@
       font-size: 2.5rem;
       font-weight: 500;
       line-height: 68px;
+      cursor: default;
     }
   }
 }

@@ -1,0 +1,12 @@
+@import "../_variables";
+@import "../mixins";
+@import "../_placeholders";
+
+.single-card {
+  max-width: $max-width;
+  @extend %centered;
+  color: $primary-color;
+  .single-card-cover {
+    margin-top: 50px;
+  }
+}

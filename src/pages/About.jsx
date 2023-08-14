@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import CollapseList from "../components/CollapseList";
 
 const About = () => {
   const bannerData = {
@@ -9,6 +10,7 @@ const About = () => {
   return (
     <>
       <Banner {...bannerData} />
+      <CollapseList />
     </>
   );
 };
