@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
+import "../styles/components/Collapse.scss";
 
 const Collapse = ({ data }) => {
   const [open, setOpen] = useState(false);
@@ -9,9 +10,9 @@ const Collapse = ({ data }) => {
   };
 
   return (
-    <div className="collapse_container">
-      <div className="button_container" onClick={toggle}>
-        <div className="collapse_button">
+    <div className="collapse-container">
+      <div className="button-container" onClick={toggle}>
+        <div className="collapse-button">
           <p>{data.label}</p>
         </div>
         {open ? (
@@ -20,7 +21,7 @@ const Collapse = ({ data }) => {
           <i className="fa-solid fa-chevron-down"></i>
         )}
       </div>
-      {open && <div className="collapse_content">{data.content}</div>}
+      {open && <div className="collapse-content">{data.content}</div>}
     </div>
   );
 };
