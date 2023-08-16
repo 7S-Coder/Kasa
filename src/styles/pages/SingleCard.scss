@@ -30,6 +30,7 @@
 
     .single-card-location {
       margin-top: 0;
+      margin-bottom: 0;
     }
 
     .title-and-host-container {
@@ -66,27 +67,35 @@
       }
     }
 
-    .single-card-tags {
-      color: $color-white;
-      .tag {
-        width: 115px;
-        height: 25px;
-        flex-shrink: 0;
-        background-color: $primary-color;
+    .tag-star-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .single-card-tags {
+        display: flex;
+        color: $color-white;
+        width: auto;
+        .tag {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 115px;
+          height: 45%;
+          flex-shrink: 0;
+          background-color: $primary-color;
 
-        color: #fff;
-        text-align: center;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 142.6%;
-        margin: 0 12px;
-        padding: 6px 40px;
-        border-radius: 10px;
-      }
+          color: #fff;
+          text-align: center;
+          font-style: normal;
+          font-weight: 500;
+          margin: 0 12px;
+          padding: 6px 40px;
+          border-radius: 10px;
+        }
 
-      .tag:first-child {
-        margin-left: 0;
+        .tag:first-child {
+          margin-left: 0;
+        }
       }
     }
 
@@ -123,6 +132,8 @@
           color: $primary-color;
           background-color: $color-clearGrey;
           list-style: none;
+          padding-right: 5px;
+          border-radius: 10px;
         }
 
         .collapse-button {

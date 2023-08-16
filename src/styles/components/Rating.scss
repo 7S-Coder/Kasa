@@ -1,0 +1,12 @@
+.rating-ul {
+  display: flex;
+}
+
+.rating-ul li {
+  margin-right: 0.2vw;
+  list-style: none;
+}
+
+.rating-ul li img {
+  width: clamp(2rem, 1vw, 1rem);
+}

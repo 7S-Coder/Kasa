@@ -2,6 +2,7 @@ import Slideshow from "../components/Slideshow";
 import logementsData from "../data/logements.json";
 import { useParams } from "react-router-dom";
 import Collapse from "../components/Collapse";
+import Rating from "../components/Rating";
 import "../styles/components/Collapse.scss";
 import "../styles/pages/SingleCard.scss";
 const SingleCard = () => {
@@ -31,12 +32,18 @@ const SingleCard = () => {
           {/* Inclure la location */}
           <p className="single-card-location">{selectedCard.location}</p>
           {/* Inclure les tags */}
-          <div className="single-card-tags">
-            {selectedCard.tags.map((tag, index) => (
-              <span key={index} className="tag">
-                {tag}
-              </span>
-            ))}
+          <div className="tag-star-container">
+            <div className="single-card-tags">
+              {selectedCard.tags.map((tag, index) => (
+                <span key={index} className="tag">
+                  {tag}
+                </span>
+              ))}
+              {/* Inclure les étoiles */}
+            </div>
+            <div>
+              <Rating rating={selectedCard.rating} />
+            </div>
           </div>
 
           <div className="carrousel-container">
