@@ -10,6 +10,10 @@
     margin-top: 50px;
   }
 
+  .slideshow_container_pictures {
+    margin-top: 50px;
+  }
+
   .title-loc-tag-box {
     width: 1320px;
     text-align: left;
@@ -21,11 +25,45 @@
       font-style: normal;
       font-weight: 500;
       line-height: 142.6%;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     .single-card-location {
       margin-top: 0;
+    }
+
+    .title-and-host-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .host-container {
+        display: flex;
+        align-items: center;
+
+        p {
+          text-align: right;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 142.6%;
+        }
+
+        .circle-pic {
+          margin-left: 10px;
+          border-radius: 50%;
+          background-color: $color-clearGrey;
+          width: 64px;
+          height: 64px;
+
+          img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+          }
+        }
+      }
     }
 
     .single-card-tags {
@@ -61,7 +99,20 @@
         width: 44%;
 
         .button-container {
+          display: flex;
           height: 52px;
+          width: 100%;
+          border-radius: 5px;
+          background-color: $primary-color;
+          border-radius: 10px;
+          align-items: center;
+
+          img {
+            background-color: $primary-color;
+            width: 32px;
+            height: 32px;
+            margin-right: 20px;
+          }
         }
 
         .collapse-content {
@@ -75,30 +126,15 @@
         }
 
         .collapse-button {
-          background-color: $primary-color;
           color: $color-white;
+          width: 100%;
 
           display: flex;
           align-items: center;
           padding-left: 10px;
-          border-radius: 10px;
+          // border-radius: 10px 0 0 10px;
         }
       }
-    }
-  }
-
-  .host-container {
-    position: absolute;
-    display: flex;
-    top: 60vh;
-    right: 289px;
-
-    .circle-pic {
-      margin-left: 10px;
-      border-radius: 50%;
-      background-color: $color-clearGrey;
-      width: 64px;
-      height: 64px;
     }
   }
 }

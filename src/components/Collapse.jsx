@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/components/Collapse.scss";
 import ChevronUp from "../img/chevron-up-solid.svg";
-import ChevronDown from "../img/chevron-down-solid.svg";
+import ChevronDown from "../img/chevron-down-svgrepo-com.svg";
 
 const Collapse = ({ data }) => {
   const [open, setOpen] = useState(false);
@@ -18,9 +18,9 @@ const Collapse = ({ data }) => {
           <p>{data.label}</p>
         </div>
         {open ? (
-          <img src={ChevronUp} alt="chervron-up"></img>
+          <img src={ChevronUp} className="chevron-up" alt="chervron-up" />
         ) : (
-          <img src={ChevronDown} alt="chevron-down"></img>
+          <img src={ChevronDown} className="chevron-down" alt="chevron-down" />
         )}
       </div>
       {open && <div className="collapse-content">{data.content}</div>}

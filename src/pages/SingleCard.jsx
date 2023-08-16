@@ -2,8 +2,8 @@ import Slideshow from "../components/Slideshow";
 import logementsData from "../data/logements.json";
 import { useParams } from "react-router-dom";
 import Collapse from "../components/Collapse";
+import "../styles/components/Collapse.scss";
 import "../styles/pages/SingleCard.scss";
-
 const SingleCard = () => {
   const { id } = useParams();
 
@@ -15,7 +15,19 @@ const SingleCard = () => {
         <Slideshow data={selectedCard.pictures} />
         <div className="title-loc-tag-box">
           {/* Inclure le titre */}
-          <p className="single-card-title">{selectedCard.title}</p>
+          <div className="title-and-host-container">
+            <p className="single-card-title">{selectedCard.title}</p>
+            {/* Inclure le host */}
+            <div className="host-container">
+              <p>{selectedCard.host.name}</p>
+              <div className="circle-pic">
+                <img
+                  src={selectedCard.host.picture}
+                  alt={selectedCard.host.name}
+                />
+              </div>
+            </div>
+          </div>
           {/* Inclure la location */}
           <p className="single-card-location">{selectedCard.location}</p>
           {/* Inclure les tags */}
@@ -44,13 +56,6 @@ const SingleCard = () => {
                 )),
               }}
             />
-          </div>
-          {/* Inclure le host */}
-          <div className="host-container">
-            <p>{selectedCard.host.name}</p>
-            <div className="circle-pic">
-              <img src="" alt="" />
-            </div>
           </div>
         </div>
       </div>
