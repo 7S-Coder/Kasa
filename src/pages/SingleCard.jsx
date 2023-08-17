@@ -21,12 +21,14 @@ const SingleCard = () => {
             {/* Inclure le host */}
             <div className="host-container">
               <p>{selectedCard.host.name}</p>
-              <div className="circle-pic">
+              {selectedCard.host.picture ? (
                 <img
                   src={selectedCard.host.picture}
                   alt={selectedCard.host.name}
                 />
-              </div>
+              ) : (
+                <div className="circle-pic"></div>
+              )}
             </div>
           </div>
           {/* Inclure la location */}

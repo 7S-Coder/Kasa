@@ -8,3 +8,22 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+%black-bg-hover {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.759);
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    opacity: 0.1;
+    z-index: 10;
+  }
+}

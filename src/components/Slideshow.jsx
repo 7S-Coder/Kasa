@@ -21,29 +21,29 @@ const Slideshow = (data) => {
   return (
     <div className="slideshow_container">
       {data.data.length > 1 && (
-        <>
-          <div className="arrow-container">
-            <img
-              src={leftArrow}
-              alt=""
-              className="slideshow_container_arrow leftArrow"
-              onClick={previousPicture}
-            />
-            <img
-              src={rightArrow}
-              alt=""
-              className="slideshow_container_arrow rightArrow"
-              onClick={nextPicture}
-            />
-          </div>
-        </>
+        <div className="arrow-container">
+          <img
+            src={leftArrow}
+            alt=""
+            className="slideshow_container_arrow leftArrow"
+            onClick={previousPicture}
+          />
+          <img
+            src={rightArrow}
+            alt=""
+            className="slideshow_container_arrow rightArrow"
+            onClick={nextPicture}
+          />
+        </div>
       )}
       <div className="slideshow_container_pictures">
         <img src={data.data[currentIndex]} alt="" />
       </div>
-      <div className="slideshow_container_numbers">
-        <p>{currentIndex + 1 + "/" + data.data.length}</p>
-      </div>
+      {data.data.length > 1 && (
+        <div className="slideshow_container_numbers">
+          <p>{currentIndex + 1 + "/" + data.data.length}</p>
+        </div>
+      )}
     </div>
   );
 };
