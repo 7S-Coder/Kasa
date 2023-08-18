@@ -7,5 +7,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 3.1vh;
+  .card_block {
+    width: 350px;
+    height: 350px;
+    margin: 1.5vh 2.1vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .card-list {
+    background-color: $color-white;
+    justify-content: left;
+
+    .card_block {
+      margin: 2.07vh 0;
+      width: 100%;
+    }
+  }
 }

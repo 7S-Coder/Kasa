@@ -8,5 +8,11 @@
   @extend %centered;
   background-color: $color-clearGrey;
   border-radius: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 2.6vh;
+}
+
+@media (max-width: 1440px) {
+  .gallery {
+    margin: 0 2vw 2.6vh;
+  }
 }
