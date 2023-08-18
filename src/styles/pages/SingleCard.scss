@@ -5,7 +5,6 @@
 .single-card {
   max-width: $max-width;
   @extend %centered;
-  // color: $primary-color;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -102,7 +101,7 @@
           margin: 0 12px;
           padding: 6px 40px;
           border-radius: 10px;
-          position: relative; /* Ajoutez cette ligne */
+          position: relative;
           @extend %black-bg-hover;
         }
 

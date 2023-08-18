@@ -3,12 +3,17 @@ import logementsData from "../data/logements.json";
 import { useParams } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import Rating from "../components/Rating";
+import Error404 from "../pages/Error404";
 import "../styles/components/Collapse.scss";
 import "../styles/pages/SingleCard.scss";
 const SingleCard = () => {
   const { id } = useParams();
 
   const selectedCard = logementsData.find((card) => card.id === id);
+
+  if (!selectedCard) {
+    return <Error404 />;
+  }
 
   return (
     <>

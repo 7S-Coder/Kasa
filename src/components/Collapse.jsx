@@ -32,8 +32,8 @@ Collapse.propTypes = {
   data: PropTypes.shape({
     label: PropTypes.string.isRequired,
     content: PropTypes.oneOfType([
-      PropTypes.string, // Permet une chaîne de caractères
-      PropTypes.arrayOf(PropTypes.element), // Permet un tableau d'éléments React
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.element),
     ]).isRequired,
   }).isRequired,
 };
