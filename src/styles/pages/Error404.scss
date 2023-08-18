@@ -15,13 +15,13 @@
   .error_container {
     // @include flex-center;
     flex-direction: column;
-    margin-bottom: 150px;
+    margin-bottom: 15.5vh;
     .error_number {
       font-family: $principal-font-family;
       font-size: 14rem;
       font-weight: 900;
-      margin-top: 139px;
-      margin-bottom: 139px;
+      margin-top: 14.4vh;
+      margin-bottom: 14.4vh;
     }
 
     .error_message {
@@ -29,7 +29,6 @@
       text-align: center;
       font-size: 2rem;
       font-weight: 500;
-      //   @include flex-center;
     }
   }
 
@@ -38,7 +37,7 @@
     text-decoration: underline;
     font-size: 1.2rem;
     text-align: center;
-    margin-bottom: 139px;
+    margin-bottom: 14.4vh;
   }
 }
 

@@ -11,6 +11,10 @@ const SingleCard = () => {
 
   const selectedCard = logementsData.find((card) => card.id === id);
 
+  {
+    /* Si l'Id ecrite dans l'url depuis une card n'existe pas, l'utilisateur est retourné à la page d'erreur. */
+  }
+
   if (!selectedCard) {
     return <Error404 />;
   }
