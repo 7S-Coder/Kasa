@@ -12,7 +12,7 @@ const SingleCard = () => {
   const selectedCard = logementsData.find((card) => card.id === id);
 
   {
-    /* Si l'Id ecrite dans l'url depuis une card n'existe pas, l'utilisateur est retourné à la page d'erreur. */
+    /* Si l'Id inscrite dans l'url depuis une card n'existe pas, l'utilisateur est retourné à la page d'erreur. */
   }
 
   if (!selectedCard) {
@@ -23,12 +23,28 @@ const SingleCard = () => {
     <>
       <div className="single-card">
         <Slideshow data={selectedCard.pictures} />
-        <div className="title-loc-tag-box">
-          {/* Inclure le titre */}
-          <div className="title-and-host-container">
-            <p className="single-card-title">{selectedCard.title}</p>
-            {/* Inclure le host */}
-            <div className="host-container">
+        <section className="bottom-container">
+          {/* Inclure le container */}
+          <div className="container">
+            {/* Inclure le titre */}
+            <p className="title">{selectedCard.title}</p>
+            {/* Inclure la location */}
+            <p className="location">{selectedCard.location}</p>
+            {/* Inclure les tags */}
+            <div className="tags">
+              {selectedCard.tags.map((tag, index) => (
+                <span key={index} className="tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Inclure l'host et les étoiles */}
+          <div className="host-data-and-stars">
+            {/* Inclure l'host */}
+
+            <div className="host-data">
               <p>{selectedCard.host.name}</p>
               {selectedCard.host.picture ? (
                 <img
@@ -39,43 +55,29 @@ const SingleCard = () => {
                 <div className="circle-pic"></div>
               )}
             </div>
+            {/* Inclure les étoiles */}
+            <Rating rating={selectedCard.rating} />
           </div>
-          {/* Inclure la location */}
-          <p className="single-card-location">{selectedCard.location}</p>
-          {/* Inclure les tags */}
-          <div className="tag-star-container">
-            <div className="single-card-tags">
-              {selectedCard.tags.map((tag, index) => (
-                <span key={index} className="tag">
+        </section>
+        {/* Inclure les collapses */}
+        <section className="carrousel-container">
+          <Collapse
+            data={{
+              label: "Description",
+              content: selectedCard.description,
+            }}
+          />
+          <Collapse
+            data={{
+              label: "Equipements",
+              content: selectedCard.equipments.map((tag, index) => (
+                <li key={index} className="tag">
                   {tag}
-                </span>
-              ))}
-              {/* Inclure les étoiles */}
-            </div>
-            <div>
-              <Rating rating={selectedCard.rating} />
-            </div>
-          </div>
-
-          <div className="carrousel-container">
-            <Collapse
-              data={{
-                label: "Description",
-                content: selectedCard.description,
-              }}
-            />
-            <Collapse
-              data={{
-                label: "Equipements",
-                content: selectedCard.equipments.map((tag, index) => (
-                  <li key={index} className="tag">
-                    {tag}
-                  </li>
-                )),
-              }}
-            />
-          </div>
-        </div>
+                </li>
+              )),
+            }}
+          />
+        </section>
       </div>
     </>
   );

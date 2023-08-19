@@ -1,12 +1,23 @@
 .rating-ul {
   display: flex;
+
+  li {
+    margin-right: 0.2vw;
+    list-style: none;
+
+    img {
+      width: clamp(2rem, 1vw, 1rem);
+    }
+  }
 }
 
-.rating-ul li {
-  margin-right: 0.2vw;
-  list-style: none;
-}
-
-.rating-ul li img {
-  width: clamp(2rem, 1vw, 1rem);
+@media (max-width: 425px) {
+  .rating-ul {
+    padding-left: 0;
+    li {
+      img {
+        width: clamp(1.3rem, 1vw, 1rem);
+      }
+    }
+  }
 }

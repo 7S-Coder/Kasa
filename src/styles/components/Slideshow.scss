@@ -4,7 +4,6 @@
 
 .slideshow_container {
   position: relative;
-  margin: 0 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,5 +43,11 @@
     color: white;
     font-size: 1.2rem;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 1440px) {
+  .slideshow_container {
+    margin: 0 2.1vw;
   }
 }
