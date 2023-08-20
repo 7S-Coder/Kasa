@@ -12,7 +12,7 @@ const Collapse = ({ data }) => {
   };
 
   return (
-    <div className="collapse-container">
+    <div className="collapse-container collapse_about">
       <div className="button-container" onClick={toggle}>
         <div className="collapse-button">
           <p>{data.label}</p>
