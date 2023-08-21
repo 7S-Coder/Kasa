@@ -26,12 +26,29 @@
       padding: 10px;
       font-weight: 500;
       cursor: pointer;
+
+      .chevron {
+        transition: transform 0.6s ease;
+        transform-origin: center;
+      }
+
+      .chevron-up {
+        transform: rotate(0deg);
+      }
+
+      .chevron-down {
+        transform: rotate(180deg);
+      }
+
+      .open {
+        transform: rotate(-180deg);
+      }
     }
 
     .collapse-content {
       background-color: $color-clearGrey;
       color: $primary-color;
-      padding: 20px 10px 10px;
+      padding: 20px;
       text-align: left;
       border-radius: 0 0 10px 5px;
     }
@@ -41,39 +58,3 @@
     width: 53.3vw;
   }
 }
-
-// .collapse-list {
-//   margin: 30px 60px;
-//   display: flex;
-//   justify-content: space-between;
-//   .collapse-container {
-//     width: 48%;
-//     margin-bottom: 25px;
-//     font-size: 1.3rem;
-
-//     .button-container {
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//       padding: 5px;
-//       background-color: $primary-color;
-//       border-radius: 5px;
-//       color: $color-white;
-//       padding: 10px;
-//       font-weight: 500;
-//       cursor: pointer;
-//     }
-
-//     .collapse-content {
-//       background-color: $color-clearGrey;
-//       color: $primary-color;
-//       padding: 20px 10px 10px;
-//       border-radius: 0 0 10px 5px;
-
-//       line-height: 25px;
-//       li {
-//         margin-top: 5px;
-//       }
-//     }
-//   }
-// }

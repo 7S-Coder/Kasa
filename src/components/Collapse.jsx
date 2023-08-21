@@ -18,9 +18,17 @@ const Collapse = ({ data }) => {
           <p>{data.label}</p>
         </div>
         {open ? (
-          <img src={ChevronUp} className="chevron-up" alt="chervron-up" />
+          <img
+            src={ChevronUp}
+            className="chevron chevron-up open"
+            alt="chervron-up"
+          />
         ) : (
-          <img src={ChevronDown} className="chevron-down" alt="chevron-down" />
+          <img
+            src={ChevronDown}
+            className="chevron chevron-down"
+            alt="chevron-down"
+          />
         )}
       </div>
       {open && <div className="collapse-content">{data.content}</div>}
