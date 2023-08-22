@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import CollapseList from "../components/CollapseList";
-import "../styles/pages/About.scss";
+// import "../styles/pages/About.scss";
 
 const About = () => {
   const bannerData = {
