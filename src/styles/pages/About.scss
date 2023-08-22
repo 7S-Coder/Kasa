@@ -1,3 +1,19 @@
+@import "../_variables";
+@import "../_mixins";
+@import "../_placeholders";
+
+.collapse-list {
+  .collapse_about {
+  }
+
+  .collapse-container {
+    .button-container {
+      max-width: 53.3vw;
+      @extend %centered;
+    }
+  }
+}
+
 @media (max-width: 425px) {
   .collapse-list {
     margin: 1.5vh 2vw;
