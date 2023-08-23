@@ -11,7 +11,7 @@ footer {
   align-items: center;
   width: 100%;
   padding: 20px 0;
-  padding-top: 40px;
+  padding-top: 6.85vh;
   background-color: black;
   color: white;
 
@@ -29,9 +29,20 @@ footer {
     padding-bottom: 30px;
   }
 
-  span {
+  p {
     width: 100%;
     text-align: center;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  footer {
+    padding-bottom: 6.02vh;
+    p {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
